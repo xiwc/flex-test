@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.binding.utils.BindingUtils;
+			import mx.controls.Alert;
+			
+			private function show(msg:String):void{
+				
+				Alert.show("message", "title");
+				
+			}
+			
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				show('');
+			}
+			
+		]]>  
+	</fx:Script>
+	<s:Button x="10" y="10" label="按钮" click="button1_clickHandler(event)"/>
+	<s:DataGroup x="10" y="39" width="279" height="236">
+		<s:layout>
+			<s:VerticalLayout>
+				<s:horizontalAlign>left</s:horizontalAlign>
+			</s:VerticalLayout>
+		</s:layout>
+		
+		<s:itemRenderer>
+			<fx:Component>
+				<s:ItemRenderer>
+					<s:states>
+						<s:State name="normal"/>
+					</s:states>
+					<s:VGroup>
+						<s:Label text="{data.firstName}"/>
+					</s:VGroup>
+				</s:ItemRenderer>
+			</fx:Component>
+		</s:itemRenderer>
+	</s:DataGroup>
+</s:Application>

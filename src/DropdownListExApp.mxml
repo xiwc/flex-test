@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:comp="comp.*"
+			   minWidth="955" minHeight="600">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<comp:DropdownListEx x="315" y="178" width="300">
+		<comp:itemRenderer>
+			<fx:Component>
+				<s:ItemRenderer>
+					<s:HGroup left="10">
+						<comp:CheckBoxItemRenderer label="{data}"/>
+					</s:HGroup>
+				</s:ItemRenderer>
+			</fx:Component>
+		</comp:itemRenderer>
+		<comp:dataProvider>
+			<s:ArrayCollection>
+				<fx:String>xx</fx:String>
+				<fx:String>yy</fx:String>
+				<fx:String>zz</fx:String>
+			</s:ArrayCollection>
+		</comp:dataProvider>
+	
+	</comp:DropdownListEx>
+</s:Application>
